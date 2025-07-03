@@ -1,0 +1,36 @@
+# templates/index.html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hill Cipher App</title>
+</head>
+<body>
+<h2>Hill Cipher Encryption/Decryption</h2>
+<form method="POST">
+    <label>Enter Text:</label>
+    <input type="text" name="text" required><br>
+    <label>Key Size (Max ≈ {{ max_key }}):</label>
+    <input type="number" name="key_size" required><br>
+    <label>Key Mode:</label>
+    <select name="key_mode">
+        <option value="auto">Auto</option>
+        <option value="manual">Manual</option>
+    </select><br>
+    <label>Key Input (for manual or decrypt):</label>
+    <input type="text" name="key_input"><br>
+    <button type="submit" name="action" value="Encrypt">Encrypt</button>
+    <button type="submit" name="action" value="Decrypt">Decrypt</button>
+</form>
+{% if error %}
+<p style="color:red">{{ error }}</p>
+{% endif %}
+{% if result %}
+<p>Encrypted Text: {{ result }}</p>
+<a href="/download-key">Download Key as PDF</a>
+{% endif %}
+{% if decrypted %}
+<p>Decrypted Text: {{ decrypted }}</p>
+{% endif %}
+</body>
+</html>
