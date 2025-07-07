@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <title>Hill Cipher App</title>
 </head>
@@ -13,9 +14,8 @@
     <label>Key Size (Max ≈ {{ max_key }}):</label>
     <input type="number" name="key_size" required><br>
     <label>Key Mode:</label>
-    <select name="key_mode">
+    <select name="key_mode" disabled>
         <option value="auto">Auto</option>
-        <option value="manual">Manual</option>
     </select><br>
     <label>Key Input (for manual or decrypt):</label>
     <input type="text" name="key_input"><br>
