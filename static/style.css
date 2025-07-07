@@ -1,0 +1,122 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 30px; /* Adjusted for spacing from the top */
+}
+
+/* Container for the form */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the contents of the form */
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button container */
+button[type="submit"] {
+    width: 48%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 4px; /* Margin between buttons */
+}
+
+button[type="submit"]:last-child {
+    background-color: #f44336;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Error message styling */
+p[style="color:red"] {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Result and Decrypted Text styling */
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Link styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Link styling */
+a {
+    display: inline-block; /* Makes the <a> behave like a block element */
+    padding: 10px 20px;
+    background-color: #4181b6; /* Default background color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background-color and transform */
+}
+
+/* Hover effect */
+a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    background-color: #1a2bc5; /* Darker shade of blue */
+    transform: scale(1.05); /* Slightly scale up to give a button press effect */
+}
+
