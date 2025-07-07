@@ -17,7 +17,8 @@ def index():
         raw_text = request.form['text']
         processed_text = raw_text.replace(' ', '_').upper()
         key_size = int(request.form['key_size'])
-        key_mode = request.form['key_mode']
+        #key_mode = request.form['key_mode']
+        key_mode = "auto"
         key_input = request.form.get('key_input')
         action = request.form['action']
         max_key = get_max_key_size(processed_text)
